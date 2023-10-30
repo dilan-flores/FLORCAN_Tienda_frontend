@@ -12,7 +12,7 @@ export const Confirmar = () => {
     
     const verifyToken = async()=>{
         try {
-            const url = `${import.meta.env.VITE_BACKEND_URL}/confirmar/${token}`
+            const url = `https://florcan-frontend.netlify.app/confirmar/${token}`
             const respuesta = await axios.get(url)
             setMensaje({respuesta:respuesta.data.msg,tipo:true})
         } catch (error) {
